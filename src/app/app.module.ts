@@ -7,12 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
+import { ModuloComponent } from './modulo/modulo.component'; 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    ModuloComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +28,11 @@ import {MatInputModule} from '@angular/material/input';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
-    ReactiveFormsModule
-    MatInputModule
+    MatListModule,
+    ReactiveFormsModule,
+    MatInputModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

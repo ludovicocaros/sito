@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import * as $ from 'jquery';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'sito';
+  
+  constructor(private router: Router) {}
+
+  ngOnInit(){
+    this.router.navigate(["Modulo"]);
+
+
 }

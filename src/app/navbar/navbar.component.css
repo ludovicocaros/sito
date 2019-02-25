@@ -31,13 +31,64 @@ button{
   border-style:groove
 }
 
-#bottone{
+#accedi{
   position: absolute;
   margin-top: 62%;
   margin-right: 53%;
 }
-#reg{
-  position: absolute;
-  margin-top: 62%;
+
+#accedi{
+  font-family: fantasy;
+}
+
+#primo{
+  margin-top: 10px;
+  margin-right: 120px;
+  border-radius: 12% 4% ;
+	font-family: fantasy;
+	border-color:transparent;
+  letter-spacing: 4px;
+}
+
+
+#secondo{
+	border-radius: 12% 4% ;
+	font-family: fantasy;
+	border-color:transparent;
+  letter-spacing: 4px;
+  margin-top: 10px;
   
 }
+
+#form{position:absolute;
+  display: grid;
+width: 300px;
+background-color: #fff;
+   
+border-radius: 3px;
+box-shadow: 2px 2px 2px #ccc;
+top:11%;
+right:0;
+
+}
+
+#form2{position:absolute;
+  display: grid;
+width: 300px;
+background-color: #fff;
+   
+border-radius: 3px;
+box-shadow: 2px 2px 2px #ccc;
+top:11%;
+right:0;
+}
+
+#reg{
+  position: absolute;
+  margin-top: 162%;
+  right: 5%;
+  font-family: fantasy;
+}
+
+	
+

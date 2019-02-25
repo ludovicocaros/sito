@@ -2,25 +2,93 @@
     <mat-toolbar color="primary">
       <img id="img" src="http://www.telestream.net/images/home/logo-product-wirecast.png">
       
-      <span>TRAVELS</span>
-      <div>
-      <button id="bot" mat-button>LogIn</button>
-   </div>
-    </mat-toolbar>
+      <span> AFRICAN TRAVELS</span>
+      <button mat-raised-button  type="button" id="primo">Login</button>
+      <button mat-raised-button type="button" id="secondo">SignIn</button>
     
-    <span id="div">
-        <form class="modulo" [formGroup]="mioForm">
+    </mat-toolbar>
 
-            <mat-form-field class="example-full-width">
-              <input matInput  placeholder="Nome" Name="nome">
-            </mat-form-field>
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Password" Name="password" > 
-              </mat-form-field>
-         <button id="bottone" mat-button>Accedi</button>
-         <button id="reg" mat-button>Registrati</button>
-           
+    
+    <span  id="form">
+      <form class="modulo" [formGroup]="mioForm">
+      
+        <mat-form-field class="example-full-width">
+          <input id="username" matInput placeholder="Username" type="text" formControlName="username">
+          <span *ngIf="username.invalid && (username.dirty || username.touched)">
+          <span *ngIf="username.errors.required">Inserisci username</span></span>
+        </mat-form-field>
+        
+      
+      <mat-form-field class="example-full-width">
+          <input  type="password" id="password" matInput placeholder="Password" formControlName="password">
+            <span *ngIf="password.invalid && (password.dirty || password.touched)">
+          <span *ngIf="password.errors.required">Inserisci password</span></span>
+         </mat-form-field><br>
+         <button id="accedi" (click)="login()">accedi</button>
+         
         </form>
       </span>
       
-    
+      <span id="form2">
+        <form class="modulo2" [formGroup]="mioForm2">
+        
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Nome" formControlName="nome">
+            <span *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+            <span *ngIf="nome.errors.minlength">Scrivi almeno 2 caratteri</span>
+             <span *ngIf="nome.errors.required">Inserisci nome</span></span>
+            </mat-form-field>
+         
+        
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Cognome"  formControlName="cognome" >
+            <span *ngIf="cognome.invalid && (cognome.dirty || cognome.touched)">
+            <span *ngIf="cognome.errors.minlength">Scrivi almeno 5 caratteri</span>
+            <span *ngIf="cognome.errors.required">Inserisci cognome</span></span>
+           </mat-form-field>
+        
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Data di nascita" type="date" formControlName="datadi_nascita">
+            <span *ngIf="datadi_nascita.invalid && (datadi_nascita.dirty || datadi_nascita.touched)">
+            <span *ngIf="datadi_nascita.errors.required">Inserisci data di nascita</span></span>
+           </mat-form-field>
+        
+             <mat-form-field class="example-full-width">
+            <input matInput placeholder="Residenza"  formControlName="residenza">
+            <span *ngIf="residenza.invalid && (residenza.dirty || residenza.touched)">
+            <span *ngIf="residenza.errors.required">Inserisci residenza</span></span>
+           </mat-form-field>
+        
+             <mat-form-field class="example-full-width">
+            <input matInput placeholder="Domicilio"  formControlName="domicilio">
+            <span *ngIf="domicilio.invalid && (domicilio.dirty || domicilio.touched)">
+            <span *ngIf="domicilio.errors.required">Inserisci domicilio</span></span>
+           </mat-form-field>
+           
+           
+           <mat-form-field class="example-full-width">
+            <input matInput placeholder="Citta" formControlName="citta" >
+             <span *ngIf="citta.invalid && (citta.dirty || citta.touched)">
+            <span *ngIf="citta.errors.minlength">Scrivi almeno 5 caratteri</span>
+            <span *ngIf="citta.errors.required">Inserisci citta</span></span>
+        </mat-form-field>
+        
+         <mat-form-field class="example-full-width">
+            <input matInput placeholder="Telefono" type="number"  formControlName="telefono">
+            <span *ngIf="telefono.invalid && (telefono.dirty || telefono.touched)">
+            <span *ngIf="telefono.errors.required">Inserisci numero di telefono</span></span>
+           </mat-form-field>
+        
+           
+            <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" formControlName="mail" >
+             <span *ngIf="mail.invalid && (mail.dirty || mail.touched)">
+            <span *ngIf="mail.errors.required">Inserire mail</span>
+            <span *ngIf="mail.errors.email">Mail non corretta</span></span>
+            
+        </mat-form-field><br>
+        <button id="reg" (click)="messaggio()">regitrazione</button>
+        
+          </form>
+        </span>
+     
