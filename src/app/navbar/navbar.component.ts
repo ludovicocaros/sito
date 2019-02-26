@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import * as $ from 'jquery';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
@@ -7,14 +7,15 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent {
+export class NavbarComponent implements OnInit {
   mioForm:FormGroup;
   mioForm2:FormGroup;
 
-
+  
   
     
-  constructor(private router: Router) {
+  constructor( private router: Router) {
+    
   
   this.mioForm2 = new FormGroup({
     nome: new FormControl('', [
@@ -78,11 +79,9 @@ export class NavbarComponent {
 
   var dati={username:"jdoe", password:"jdoe"};
   var  username = $("#username").val();
-  console.log(username);
   var password = $("#password").val();
-  console.log(password);
   if( dati.username == username && dati.password == password){
-    this.router.navigateByUrl('/modulo');
+    this.router.navigateByUrl("modulo");
     }
     else
     {
@@ -100,40 +99,27 @@ export class NavbarComponent {
       alert("Registrazione completata!")};
     }
   
+    casa(router:Router){
+      this.router.navigate(["home"]);
+    }
     
-
+    toggle_primo(){$("#form").toggle();}
+    toggle_secondo(){$("#form2").toggle();}
+    scompare_form(){$("#form").css("display","none");}
+    scompare_formdue(){$("#form2").css("display","none");}
+    
+    
+    
+    
+    ngOnInit() {
+      
+      $("#form").css("display","none");
+      $("#form2").css("display","none");
+      
+      
+    }
   
   }
   
  
-  $(function(){
-    $("#form").css("display","none")
-    });
-    $(function(){
-    $("#primo").click(function(){
-    $("#form").toggle()
-    });
-    });
-
-    
-  $(function(){
-    $("#form2").css("display","none")
-    });
-    $(function(){
-    $("#secondo").click(function(){
-    $("#form2").toggle()
-    });
-    });
-
-    
-    $(function(){
-      $("#secondo").click(function(){
-      $("#form").css("display","none")
-       });
-      });
-    
-    $(function(){
-      $("#primo").click(function(){
-      $("#form2").css("display","none")
-       });
-      });
+  

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import * as $ from 'jquery';
 import { Router } from '@angular/router';
 
@@ -12,8 +12,8 @@ export class AppComponent {
   
   constructor(private router: Router) {}
 
-  ngOnInit(){
-    this.router.navigate(["Modulo"]);
-
+  ngOnInit(router:Router){
+    this.router.navigate(['home'])}
   }
-}
+  
+   

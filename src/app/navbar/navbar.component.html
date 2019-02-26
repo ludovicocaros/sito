@@ -2,9 +2,9 @@
     <mat-toolbar color="primary">
       <img id="img" src="http://www.telestream.net/images/home/logo-product-wirecast.png">
       
-      <span> AFRICAN TRAVELS</span>
-      <button mat-raised-button  type="button" id="primo">Login</button>
-      <button mat-raised-button type="button" id="secondo">SignIn</button>
+      <span>TRAVELS</span>
+      <button mat-raised-button  type="button" (click)="toggle_primo()" (click)="scompare_formdue" id="primo">Login</button>
+      <button mat-raised-button type="button" (click)="toggle_secondo()" (click)="scompare_form" id="secondo">SignIn</button>
     
     </mat-toolbar>
 

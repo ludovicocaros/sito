@@ -1,0 +1,17 @@
+#rec{
+    position: absolute;
+    top: 10%;
+    border-radius: 2px 2px 4px;
+    
+}
+.table{
+    position: absolute;
+    top: 20%;
+    border-style: solid;
+}
+
+#second{
+    left:10%;
+    top: 20%;
+    
+}

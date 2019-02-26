@@ -10,14 +10,16 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
 import {ReactiveFormsModule,FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
-import { ModuloComponent } from './modulo/modulo.component'; 
+import { ModuloComponent } from './modulo/modulo.component';
+import { HomeComponent } from './home/home.component'; 
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ModuloComponent
+    ModuloComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
