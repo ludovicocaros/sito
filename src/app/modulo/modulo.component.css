@@ -8,12 +8,14 @@
     position: absolute;
     top: 20%;
     border-style: solid;
+    background-color: aquamarine;
 }
 
 #news{
     position: absolute;
     top: 50%;
     border-style: solid;
+    background-color: aquamarine;
 }
 #secondo{
     position: absolute;
