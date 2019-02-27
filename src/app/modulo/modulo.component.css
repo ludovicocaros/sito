@@ -10,8 +10,13 @@
     border-style: solid;
 }
 
-#second{
-    left:10%;
-    top: 20%;
-    
+#news{
+    position: absolute;
+    top: 50%;
+    border-style: solid;
+}
+#secondo{
+    position: absolute;
+    top: 10%;
+    left: 10%;
 }
